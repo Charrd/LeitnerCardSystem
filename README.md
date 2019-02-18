@@ -1,2 +1,2 @@
 # LeitnerCardSystem
-Software assessment memorisation card program
+Software assessment flash card system
