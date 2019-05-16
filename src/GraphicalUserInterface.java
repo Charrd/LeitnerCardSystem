@@ -19,6 +19,7 @@ public class GraphicalUserInterface {
         JPanel helpPanel = new JPanel(new BorderLayout());
         JPanel subButtonPanel = new JPanel(new GridLayout(2,1));
 
+
         //working with adding and layouts
         mainContentPane.setLayout(new GridLayout(2,1));
         mainContentPane.add(mainPanel);
