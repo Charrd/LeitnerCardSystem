@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 public class GraphicalUserInterface {
     int count = 0;
@@ -15,24 +17,42 @@ public class GraphicalUserInterface {
         //panel creation
         Container mainContentPane = mainJFrame.getContentPane();
         JPanel mainPanel = new JPanel(new BorderLayout());
-        JPanel buttonPanel = new JPanel(new GridLayout(1,2));
-        JPanel helpPanel = new JPanel(new BorderLayout());
+        JPanel actionButtonPanel = new JPanel(new GridLayout(1,2));
+        JPanel helpButtonSuperPanel = new JPanel(new BorderLayout());
         JPanel subButtonPanel = new JPanel(new GridLayout(2,1));
+
 
         //working with adding and layouts
         mainContentPane.setLayout(new GridLayout(2,1));
         mainContentPane.add(mainPanel);
         mainContentPane.add(subButtonPanel);
-        subButtonPanel.add(buttonPanel);
-        subButtonPanel.add(helpPanel);
+        subButtonPanel.add(actionButtonPanel);
+        subButtonPanel.add(helpButtonSuperPanel, BorderLayout.CENTER);
 
-        //Buttons created and added to panels
+        //Buttons created and added to panels with borders
+
+        Border leftThickBorder = BorderFactory.createMatteBorder(40, 100, 0, 40, Color.YELLOW);
+        Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 0, 100, Color.YELLOW);
+        Border thickBorder = BorderFactory.createMatteBorder(40, 400, 10, 400, Color.YELLOW);
+
         JButton addCardButton = new JButton("Add Card");
-        buttonPanel.add(addCardButton);
         JButton reviewButton = new JButton("Review");
-        buttonPanel.add(reviewButton);
         JButton helpButton = new JButton("Help");
-        helpPanel.add(helpButton);
+
+        addCardButton.setBorder(leftThickBorder);
+        reviewButton.setBorder(rightThickBorder);
+        helpButton.setBorder(thickBorder);
+
+        helpButton.setBackground(Color.BLACK);
+
+        actionButtonPanel.add(addCardButton, BorderLayout.CENTER);
+        actionButtonPanel.add(reviewButton, BorderLayout.CENTER);
+        helpButtonSuperPanel.add(helpButton, BorderLayout.CENTER);
+
+
+
+
+
 
 
         //Title
