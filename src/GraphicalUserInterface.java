@@ -31,9 +31,9 @@ public class GraphicalUserInterface {
 
         //Buttons created and added to panels with borders
 
-        Border leftThickBorder = BorderFactory.createMatteBorder(40, 100, 0, 40, Color.YELLOW);
-        Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 0, 100, Color.YELLOW);
-        Border thickBorder = BorderFactory.createMatteBorder(40, 400, 10, 400, Color.YELLOW);
+        Border leftThickBorder = BorderFactory.createMatteBorder(40, 100, 3, 40, new Color(14283517));
+        Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 3, 100, new Color(14283517));
+        Border thickBorder = BorderFactory.createMatteBorder(40, 400, 10, 400, new Color(14283517));
 
         JButton addCardButton = new JButton("Add Card");
         JButton reviewButton = new JButton("Review");
@@ -43,7 +43,9 @@ public class GraphicalUserInterface {
         reviewButton.setBorder(rightThickBorder);
         helpButton.setBorder(thickBorder);
 
-        helpButton.setBackground(Color.BLACK);
+        addCardButton.setBackground(new Color(3511989));
+        reviewButton.setBackground(new Color(3511989));
+        helpButton.setBackground(new Color(3511989));
 
         actionButtonPanel.add(addCardButton, BorderLayout.CENTER);
         actionButtonPanel.add(reviewButton, BorderLayout.CENTER);
