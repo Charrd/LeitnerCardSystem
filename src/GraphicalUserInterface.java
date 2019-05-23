@@ -10,7 +10,7 @@ public class GraphicalUserInterface {
     public void initialise(){
         //makes the window that opens, un-resizable, terminates program on close
         JFrame mainJFrame = new JFrame("Shoebox 2.0 by Trinity");
-        mainJFrame.setSize(new Dimension(940,540));
+        mainJFrame.setSize(new Dimension(940,640));
         mainJFrame.setResizable(false);
         mainJFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -31,9 +31,9 @@ public class GraphicalUserInterface {
 
         //Buttons created and added to panels with borders
 
-        Border leftThickBorder = BorderFactory.createMatteBorder(40, 100, 3, 40, new Color(14283517));
-        Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 3, 100, new Color(14283517));
-        Border thickBorder = BorderFactory.createMatteBorder(40, 400, 10, 400, new Color(14283517));
+        Border leftThickBorder = BorderFactory.createMatteBorder(40, 130, 3, 40, new Color(14283517));
+        Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 3, 130, new Color(14283517));
+        Border thickBorder = BorderFactory.createMatteBorder(60, 400, 20, 400, new Color(14283517));
 
         JButton addCardButton = new JButton("Add Card");
         JButton reviewButton = new JButton("Review");
@@ -43,9 +43,13 @@ public class GraphicalUserInterface {
         reviewButton.setBorder(rightThickBorder);
         helpButton.setBorder(thickBorder);
 
-        addCardButton.setBackground(new Color(3511989));
-        reviewButton.setBackground(new Color(3511989));
-        helpButton.setBackground(new Color(3511989));
+        addCardButton.setFont(new Font(addCardButton.getFont().getName(), Font.PLAIN, 40));
+        reviewButton.setFont(new Font(reviewButton.getFont().getName(), Font.PLAIN, 40));
+        helpButton.setFont(new Font(helpButton.getFont().getName(), Font.PLAIN, 30));
+
+        addCardButton.setBackground(new Color(8703723));
+        reviewButton.setBackground(new Color(8703723));
+        helpButton.setBackground(new Color(8703723));
 
         actionButtonPanel.add(addCardButton, BorderLayout.CENTER);
         actionButtonPanel.add(reviewButton, BorderLayout.CENTER);
