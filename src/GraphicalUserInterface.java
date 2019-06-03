@@ -3,13 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 
 public class GraphicalUserInterface {
-    int count = 0;
-    public void initialise(){
+
+    public JFrame mainJFrame = new JFrame("Shoebox 2.0 by Trinity");
+    public void initialiseMain(){
         //makes the window that opens, un-resizable, terminates program on close
-        JFrame mainJFrame = new JFrame("Shoebox 2.0 by Trinity");
         mainJFrame.setSize(new Dimension(940,640));
         mainJFrame.setResizable(false);
         mainJFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -20,6 +19,7 @@ public class GraphicalUserInterface {
         JPanel actionButtonPanel = new JPanel(new GridLayout(1,2));
         JPanel helpButtonSuperPanel = new JPanel(new BorderLayout());
         JPanel subButtonPanel = new JPanel(new GridLayout(2,1));
+        JPanel random = new JPanel();
 
 
         //working with adding and layouts
@@ -34,6 +34,7 @@ public class GraphicalUserInterface {
         Border leftThickBorder = BorderFactory.createMatteBorder(40, 130, 3, 40, new Color(14283517));
         Border rightThickBorder = BorderFactory.createMatteBorder(40, 40, 3, 130, new Color(14283517));
         Border thickBorder = BorderFactory.createMatteBorder(60, 400, 20, 400, new Color(14283517));
+        mainPanel.setBackground(new Color(14283517));
 
         JButton addCardButton = new JButton("Add Card");
         JButton reviewButton = new JButton("Review");
@@ -56,19 +57,12 @@ public class GraphicalUserInterface {
         helpButtonSuperPanel.add(helpButton, BorderLayout.CENTER);
 
 
-
-
-
-
-
         //Title
         JLabel mainTitle = new JLabel("Shoebox 2.0");
         mainTitle.setHorizontalAlignment(SwingConstants.CENTER);
         mainTitle.setFont(new Font(mainTitle.getFont().getName(), Font.PLAIN, 80));
         mainPanel.add(mainTitle, BorderLayout.CENTER);
 
-//        JLabel testingLabel = new JLabel("Yet");
-//        secondPanel.add(testingLabel);
 
         //button actions place holders for now
         addCardButton.addActionListener(new ActionListener() {
@@ -82,8 +76,35 @@ public class GraphicalUserInterface {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("yet");
-//                testingLabel.setText(count+" counter");
-                count++;
+            }
+        });
+
+        helpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("HELPPPPP PLEASE");
+                mainContentPane.removeAll();
+                mainContentPane.repaint();
+
+                JPanel testttt = new JPanel(new BorderLayout());
+                mainContentPane.add(testttt);
+
+                JButton backButton = new JButton("Back");
+                testttt.add(backButton, BorderLayout.CENTER);
+
+
+                backButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("NOOO GO BACK");
+                        mainContentPane.removeAll();
+                        mainContentPane.repaint();
+                        initialiseMain();
+                    }
+                });
+                mainContentPane.repaint();
+                mainJFrame.setVisible(true);
+
             }
         });
 
