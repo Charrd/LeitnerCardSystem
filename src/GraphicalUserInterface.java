@@ -7,6 +7,7 @@ import javax.swing.border.Border;
 public class GraphicalUserInterface {
 
     public JFrame mainJFrame = new JFrame("Shoebox 2.0 by Trinity");
+
     public void initialiseMain(){
         //makes the window that opens, un-resizable, terminates program on close
         mainJFrame.setSize(new Dimension(940,640));
@@ -19,7 +20,6 @@ public class GraphicalUserInterface {
         JPanel actionButtonPanel = new JPanel(new GridLayout(1,2));
         JPanel helpButtonSuperPanel = new JPanel(new BorderLayout());
         JPanel subButtonPanel = new JPanel(new GridLayout(2,1));
-        JPanel random = new JPanel();
 
 
         //working with adding and layouts
@@ -69,29 +69,23 @@ public class GraphicalUserInterface {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("YEEEEEET");
-            }
-        });
-
-        reviewButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("yet");
-            }
-        });
-
-        helpButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
                 System.out.println("HELPPPPP PLEASE");
                 mainContentPane.removeAll();
                 mainContentPane.repaint();
 
-                JPanel testttt = new JPanel(new BorderLayout());
-                mainContentPane.add(testttt);
+                JPanel content = new JPanel(new BorderLayout());
+                JPanel backPanel = new JPanel(new BorderLayout());
+                mainContentPane.add(content);
+                mainContentPane.add(backPanel);
+
+                JLabel testtitle = new JLabel("Shoebox 2.0");
+                testtitle.setHorizontalAlignment(SwingConstants.CENTER);
+                testtitle.setFont(new Font(testtitle.getFont().getName(), Font.PLAIN, 250));
 
                 JButton backButton = new JButton("Back");
-                testttt.add(backButton, BorderLayout.CENTER);
-
+                backButton.setBorder(thickBorder);
+                content.add(testtitle, BorderLayout.CENTER);
+                backPanel.add(backButton, BorderLayout.CENTER);
 
                 backButton.addActionListener(new ActionListener() {
                     @Override
@@ -108,6 +102,68 @@ public class GraphicalUserInterface {
             }
         });
 
+        reviewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("yet");
+                System.out.println("HELPPPPP PLEASE");
+                mainContentPane.removeAll();
+                mainContentPane.repaint();
+
+                JPanel content = new JPanel(new BorderLayout());
+                JPanel backPanel = new JPanel(new BorderLayout());
+                mainContentPane.add(content);
+                mainContentPane.add(backPanel);
+
+                JButton backButton = new JButton("Back");
+                backButton.setBorder(thickBorder);
+                backPanel.add(backButton, BorderLayout.CENTER);
+
+                backButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("NOOO GO BACK");
+                        mainContentPane.removeAll();
+                        mainContentPane.repaint();
+                        initialiseMain();
+                    }
+                });
+                mainContentPane.repaint();
+                mainJFrame.setVisible(true);
+
+            }
+        });
+
+        helpButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("HELPPPPP PLEASE");
+                mainContentPane.removeAll();
+                mainContentPane.repaint();
+
+                JPanel content = new JPanel(new BorderLayout());
+                JPanel backPanel = new JPanel(new BorderLayout());
+                mainContentPane.add(content);
+                mainContentPane.add(backPanel);
+
+                JButton backButton = new JButton("Back");
+                backButton.setBorder(thickBorder);
+                backPanel.add(backButton, BorderLayout.CENTER);
+
+                backButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("NOOO GO BACK");
+                        mainContentPane.removeAll();
+                        mainContentPane.repaint();
+                        initialiseMain();
+                    }
+                });
+                mainContentPane.repaint();
+                mainJFrame.setVisible(true);
+
+            }
+        });
 
         mainJFrame.setVisible(true);
     }
