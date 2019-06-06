@@ -53,7 +53,7 @@ public class HomePanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("YEEEEEET");
-                gui.setPanel(new SkeletonPanel(gui));
+                gui.setPanel(new AddCardPanel(gui));
             }
         });
 

@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class SkeletonPanel extends JPanel{
     public SkeletonPanel(GraphicalUserInterface gui) {
-        JPanel content = new JPanel(new BorderLayout());
+        JPanel content = getContent();
         JPanel backPanel = new JPanel(new BorderLayout());
         setLayout(new BorderLayout());
         add(content, BorderLayout.CENTER);
@@ -23,5 +23,9 @@ public class SkeletonPanel extends JPanel{
                 gui.setPanel(new HomePanel(gui));
             }
         });
+    }
+
+    protected JPanel getContent() {
+        return new JPanel(new BorderLayout());
     }
 }
