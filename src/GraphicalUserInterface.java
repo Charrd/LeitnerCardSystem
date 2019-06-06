@@ -13,7 +13,7 @@ public class GraphicalUserInterface {
     public static Border thickBorder = BorderFactory.createMatteBorder(60, 400, 20, 400, new Color(14283517));
 
 
-    public void initialiseMain(){
+    public GraphicalUserInterface(){
         //makes the window that opens, un-resizable, terminates program on close
         mainJFrame.setSize(new Dimension(940,640));
         mainJFrame.setResizable(false);

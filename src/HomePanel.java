@@ -61,7 +61,7 @@ public class HomePanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("yet");
-                gui.setPanel(new SkeletonPanel(gui));
+                gui.setPanel(new ReviewPanel(gui));
             }
         });
 
@@ -69,7 +69,7 @@ public class HomePanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("HELPPPPP PLEASE");
-                gui.setPanel(new SkeletonPanel(gui));
+                gui.setPanel(new HelpPanel(gui));
             }
         });
 
