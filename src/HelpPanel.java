@@ -17,11 +17,14 @@ public class HelpPanel extends SkeletonPanel {
         contentPanel.add(helpInfoPanel);
         JLabel title = new JLabel("DABDABDAB");
         title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 50));
-        JTextArea contentParagraph = new JTextArea("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum");
+        JTextArea contentParagraph = new JTextArea("This is how you use it. You fhdsfda                                  gjhshkjdl                                       then fdsafjdasfldas              ");
         contentParagraph.setFont(new Font(contentParagraph.getFont().getName(), Font.PLAIN, 20));
         contentParagraph.setLineWrap(true);
         helpInfoPanel.add(title, BorderLayout.NORTH);
         helpInfoPanel.add(contentParagraph, BorderLayout.CENTER);
+        contentPanel.setBackground(new Color(14283517));
+        helpInfoPanel.setBackground(new Color(14283517));
+        contentParagraph.setBackground(new Color(14283517));
         return contentPanel;
     }
 }

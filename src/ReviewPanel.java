@@ -13,6 +13,7 @@ public class ReviewPanel extends SkeletonPanel {
 
     protected JPanel getContent() {
         JPanel contentPanel = new JPanel(new BorderLayout());
+        contentPanel.setBackground(new Color(14283517));
         JLabel test = new JLabel("YEEEEEEEEEEEEEEEEEEEEEEET");
         test.setFont(new Font(test.getFont().getName(), Font.PLAIN, 100));
         contentPanel.add(test);

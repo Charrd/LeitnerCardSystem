@@ -10,6 +10,8 @@ public class SkeletonPanel extends JPanel{
         setLayout(new BorderLayout());
         add(content, BorderLayout.CENTER);
         add(backPanel, BorderLayout.SOUTH);
+        content.setBackground(new Color(14283517));
+        backPanel.setBackground(new Color(14283517));
 
         JButton backButton = new JButton("Back");
         //backButton.setBorder(gui.thickBorder);
