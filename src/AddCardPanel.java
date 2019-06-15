@@ -21,9 +21,9 @@ public class AddCardPanel extends SkeletonPanel {
         JPanel title = new JPanel();
         JPanel inputMother = new JPanel(new GridLayout(4,1));
         JPanel question = new JPanel();
-        JPanel questionInput = new JPanel();
+        JPanel questionInput = new JPanel(new BorderLayout());
         JPanel answer = new JPanel();
-        JPanel answerInput = new JPanel();
+        JPanel answerInput = new JPanel(new BorderLayout());
 
         inputMother.add(question);
         inputMother.add(questionInput);
@@ -34,8 +34,8 @@ public class AddCardPanel extends SkeletonPanel {
         contentPanel.add(cardPanel, BorderLayout.CENTER);
 
         JLabel titleAddCard = new JLabel("Add a New Card");
-        JTextArea answerInputTextArea = new JTextArea("ENTER HERE");
-        JTextArea questionInputTextArea = new JTextArea("ENTER HERE");
+        JTextField questionInputTextArea = new JTextField();
+        JTextField answerInputTextArea = new JTextField();
         JTextArea questionTitle = new JTextArea("Question to be answered:");
         JTextArea answerTitle = new JTextArea("Answer:");
 
@@ -61,7 +61,9 @@ public class AddCardPanel extends SkeletonPanel {
                 String questionValue = questionInputTextArea.getText();
                 String answerValue = answerInputTextArea.getText();
                 int level = 1;
-                CardSkeleton newCard = new CardSkeleton(questionValue, answerValue, level);
+                Card newCard = new Card(questionValue, answerValue, level);
+                Main.cardsList.add(newCard);
+                int arrayLength = Main.cardsList.size();
                 System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
 
             }

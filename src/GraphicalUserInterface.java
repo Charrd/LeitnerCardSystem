@@ -23,6 +23,15 @@ public class GraphicalUserInterface {
         Container mainContentPane = mainJFrame.getContentPane();
         mainContentPane.add(new HomePanel(this));
 
+        //writes array to file before window and program closes
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                RecordFunctions.write();
+            }
+        });
+
+
         mainJFrame.setVisible(true);
     }
     public void setPanel(JPanel panel){
