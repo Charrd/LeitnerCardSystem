@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AddCardPanel extends SkeletonPanel {
 
@@ -9,13 +11,14 @@ public class AddCardPanel extends SkeletonPanel {
 
     }
 
+
     protected JPanel getContent() {
         JPanel contentPanel = new JPanel(new BorderLayout());
         contentPanel.setBackground(new Color(14283517));
 
+        //panels to organise the placing of elements
         JPanel cardPanel = new JPanel(new BorderLayout());
         JPanel title = new JPanel();
-
         JPanel inputMother = new JPanel(new GridLayout(4,1));
         JPanel question = new JPanel();
         JPanel questionInput = new JPanel();
@@ -26,17 +29,17 @@ public class AddCardPanel extends SkeletonPanel {
         inputMother.add(questionInput);
         inputMother.add(answer);
         inputMother.add(answerInput);
-
         cardPanel.add(title, BorderLayout.NORTH);
         cardPanel.add(inputMother, BorderLayout.CENTER);
-
         contentPanel.add(cardPanel, BorderLayout.CENTER);
 
-        JLabel test = new JLabel("FOO");
-        JTextArea answerInputTextArea = new JTextArea("a");
-        JTextArea questionInputTextArea = new JTextArea("a");
-        JTextArea answerTitle = new JTextArea("Question to be answered:");
-        JTextArea questionTitle = new JTextArea("Answer:");
+        JLabel titleAddCard = new JLabel("Add a New Card");
+        JTextArea answerInputTextArea = new JTextArea("ENTER HERE");
+        JTextArea questionInputTextArea = new JTextArea("ENTER HERE");
+        JTextArea questionTitle = new JTextArea("Question to be answered:");
+        JTextArea answerTitle = new JTextArea("Answer:");
+
+        titleAddCard.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 50));
         answerInputTextArea.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 30));
         questionInputTextArea.setFont(new Font(questionInputTextArea.getFont().getName(), Font.PLAIN, 30));
         answerTitle.setFont(new Font(answerTitle.getFont().getName(), Font.PLAIN, 40));
@@ -44,13 +47,25 @@ public class AddCardPanel extends SkeletonPanel {
         answerTitle.setEditable(false);
         questionTitle.setEditable(false);
 
-        title.add(test);
+        title.add(titleAddCard);
         questionInput.add(questionInputTextArea, BorderLayout.CENTER);
         answerInput.add(answerInputTextArea, BorderLayout.CENTER);
         question.add(questionTitle, BorderLayout.CENTER);
         answer.add(answerTitle, BorderLayout.CENTER);
 
-        JButton submitCardButton = new JButton();
+        JButton submitCardButton = new JButton("Submit New Card");
+
+        submitCardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String questionValue = questionInputTextArea.getText();
+                String answerValue = answerInputTextArea.getText();
+                int level = 1;
+                CardSkeleton newCard = new CardSkeleton(questionValue, answerValue, level);
+                System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
+
+            }
+        });
 
         cardPanel.add(submitCardButton, BorderLayout.SOUTH);
 
