@@ -40,10 +40,10 @@ public class AddCardPanel extends SkeletonPanel {
         JTextArea answerTitle = new JTextArea("Answer:");
 
         titleAddCard.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 50));
-        answerInputTextArea.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 30));
-        questionInputTextArea.setFont(new Font(questionInputTextArea.getFont().getName(), Font.PLAIN, 30));
-        answerTitle.setFont(new Font(answerTitle.getFont().getName(), Font.PLAIN, 40));
-        questionTitle.setFont(new Font(questionTitle.getFont().getName(), Font.PLAIN, 40));
+        answerInputTextArea.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 20));
+        questionInputTextArea.setFont(new Font(questionInputTextArea.getFont().getName(), Font.PLAIN, 20));
+        answerTitle.setFont(new Font(answerTitle.getFont().getName(), Font.PLAIN, 30));
+        questionTitle.setFont(new Font(questionTitle.getFont().getName(), Font.PLAIN, 30));
         answerTitle.setEditable(false);
         questionTitle.setEditable(false);
 
@@ -54,6 +54,7 @@ public class AddCardPanel extends SkeletonPanel {
         answer.add(answerTitle, BorderLayout.CENTER);
 
         JButton submitCardButton = new JButton("Submit New Card");
+        submitCardButton.setFont(new Font(submitCardButton.getFont().getName(), Font.PLAIN, 30));
 
         submitCardButton.addActionListener(new ActionListener() {
             @Override
@@ -62,7 +63,7 @@ public class AddCardPanel extends SkeletonPanel {
                 String answerValue = answerInputTextArea.getText();
                 int level = 1;
                 Card newCard = new Card(questionValue, answerValue, level);
-                Main.cardsList.add(newCard);
+                UserData.cardsList.add(newCard);
                 System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
 
             }

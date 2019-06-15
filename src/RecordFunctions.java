@@ -11,9 +11,12 @@ public class RecordFunctions {
         Properties properties = new Properties();
         // put cards into properties
 
-        String sizeOfLists = "" + Main.cardsList.size();
+        String sizeOfLists = "" + UserData.cardsList.size();
+        String numberOfReviews = "" + UserData.counterOfReviews;
 
         properties.setProperty("numberOfRecords", sizeOfLists);
+        properties.setProperty("numberOfReviews", numberOfReviews);
+
         try {
             properties.store(new FileWriter("cardStorage.txt"), "Cards");
         } catch (IOException e) {
@@ -23,7 +26,7 @@ public class RecordFunctions {
 
     }
 
-    public static List<Card> read() {
+    public static void read() {
         List<Card> loadedCardsList = new ArrayList<>();
         Properties properties = new Properties();
         try {
@@ -31,10 +34,16 @@ public class RecordFunctions {
         } catch (IOException e) {
         }
         String StringnumberOfRecords = properties.getProperty("numberOfRecords");
+        String StringnumberOfReviews = properties.getProperty("numberOfReviews");
         int numberOfRecords = Integer.parseInt(StringnumberOfRecords);
-        System.out.println(numberOfRecords);
+
+
+
         //get cards
-        return loadedCardsList;
+
+        UserData.cardsList = loadedCardsList;
+        UserData.counterOfReviews = Integer.parseInt(StringnumberOfReviews);
+
     }
 
 }
