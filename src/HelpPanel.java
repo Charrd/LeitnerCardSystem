@@ -18,6 +18,7 @@ public class HelpPanel extends SkeletonPanel {
         JLabel title = new JLabel("DABDABDAB");
         title.setFont(new Font(title.getFont().getName(), Font.PLAIN, 50));
         JTextArea contentParagraph = new JTextArea("This is how you use it. You fhdsfda                                  gjhshkjdl                                       then fdsafjdasfldas              ");
+        contentParagraph.setEditable(false);
         contentParagraph.setFont(new Font(contentParagraph.getFont().getName(), Font.PLAIN, 20));
         contentParagraph.setLineWrap(true);
         helpInfoPanel.add(title, BorderLayout.NORTH);
