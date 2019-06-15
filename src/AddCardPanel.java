@@ -12,8 +12,10 @@ public class AddCardPanel extends SkeletonPanel {
     protected JPanel getContent() {
         JPanel contentPanel = new JPanel(new BorderLayout());
         contentPanel.setBackground(new Color(14283517));
+
         JPanel cardPanel = new JPanel(new BorderLayout());
         JPanel title = new JPanel();
+
         JPanel inputMother = new JPanel(new GridLayout(4,1));
         JPanel question = new JPanel();
         JPanel questionInput = new JPanel();
@@ -28,13 +30,29 @@ public class AddCardPanel extends SkeletonPanel {
         cardPanel.add(title, BorderLayout.NORTH);
         cardPanel.add(inputMother, BorderLayout.CENTER);
 
+        contentPanel.add(cardPanel, BorderLayout.CENTER);
+
         JLabel test = new JLabel("FOO");
-        JTextField contentParagraph = new JTextField();
-        contentParagraph.setBorder(BorderFactory.createMatteBorder(10,10,10,10, Color.BLACK));
+        JTextArea answerInputTextArea = new JTextArea("a");
+        JTextArea questionInputTextArea = new JTextArea("a");
+        JTextArea answerTitle = new JTextArea("Question to be answered:");
+        JTextArea questionTitle = new JTextArea("Answer:");
+        answerInputTextArea.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 30));
+        questionInputTextArea.setFont(new Font(questionInputTextArea.getFont().getName(), Font.PLAIN, 30));
+        answerTitle.setFont(new Font(answerTitle.getFont().getName(), Font.PLAIN, 40));
+        questionTitle.setFont(new Font(questionTitle.getFont().getName(), Font.PLAIN, 40));
+        answerTitle.setEditable(false);
+        questionTitle.setEditable(false);
 
+        title.add(test);
+        questionInput.add(questionInputTextArea, BorderLayout.CENTER);
+        answerInput.add(answerInputTextArea, BorderLayout.CENTER);
+        question.add(questionTitle, BorderLayout.CENTER);
+        answer.add(answerTitle, BorderLayout.CENTER);
 
-        title.add(test, BorderLayout.WEST);
-        answer.add(contentParagraph, BorderLayout.CENTER);
+        JButton submitCardButton = new JButton();
+
+        cardPanel.add(submitCardButton, BorderLayout.SOUTH);
 
         return contentPanel;
     }
