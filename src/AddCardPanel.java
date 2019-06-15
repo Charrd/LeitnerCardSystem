@@ -63,7 +63,6 @@ public class AddCardPanel extends SkeletonPanel {
                 int level = 1;
                 Card newCard = new Card(questionValue, answerValue, level);
                 Main.cardsList.add(newCard);
-                int arrayLength = Main.cardsList.size();
                 System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
 
             }
