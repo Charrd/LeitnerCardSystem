@@ -40,11 +40,17 @@ public class ReviewPanel extends SkeletonPanel {
         contentPanel.add(buttonBar);
 
         contentPanel.setBackground(new Color(14283517));
-
+        questionContent.setBackground(new Color(14283517));
+        questionTitle.setBackground(new Color(14283517));
+        answerContent.setBackground(new Color(14283517));
 
         next = new JButton("NEXT");
         wrong = new JButton("NEEDS WORK");
         right = new JButton("YAY I GOT IT RIGHT");
+
+        next.setBackground(new Color(8703723));
+        wrong.setBackground(new Color(8703723));
+        right.setBackground(new Color(8703723));
 
         next.setFont(new Font(next.getFont().getName(), Font.PLAIN, 30));
         right.setFont(new Font(right.getFont().getName(), Font.PLAIN, 30));
@@ -53,6 +59,7 @@ public class ReviewPanel extends SkeletonPanel {
         questionLabel = new JLabel("QUESTION");
         questionLabel.setFont(new Font(questionLabel.getFont().getName(), Font.PLAIN, 50));
         questionTitle.add(questionLabel);
+
 
         buttonBar.add(next);
         questionTitle.setVisible(false);
@@ -77,6 +84,7 @@ public class ReviewPanel extends SkeletonPanel {
                 buttonBar.add(right);
                 JTextArea answerCardValue = new JTextArea(currentReviewCards.get(cardIndex).answer);
                 answerCardValue.setFont(new Font(answerCardValue.getFont().getName(), Font.PLAIN, 30));
+                answerCardValue.setBackground(new Color(14283517));
                 answerCardValue.setEditable(false);
                 answerContent.add(answerCardValue);
             }
@@ -120,15 +128,17 @@ public class ReviewPanel extends SkeletonPanel {
                     JTextArea questionCardValue = new JTextArea(currentReviewCards.get(0).question);
                     questionCardValue.setFont(new Font(questionCardValue.getFont().getName(), Font.PLAIN, 30));
                     questionCardValue.setEditable(false);
+                    questionCardValue.setBackground(new Color(14283517));
                     cardIndex = 0;
                     questionContent.add(questionCardValue);
                 }
                 else{
                     startReview.setVisible(false);
                     questionContent.remove(startReview);
-                    JTextArea errorNoCards = new JTextArea("No cards to review :)");
+                    JTextArea errorNoCards = new JTextArea("No cards to review!");
                     errorNoCards.setFont(new Font(errorNoCards.getFont().getName(), Font.PLAIN, 80));
                     errorNoCards.setEditable(false);
+                    errorNoCards.setBackground(new Color(14283517));
                     questionContent.add(errorNoCards);
                 }
             }
@@ -153,16 +163,18 @@ public class ReviewPanel extends SkeletonPanel {
             JTextArea questionCardValue = new JTextArea(currentReviewCards.get(cardIndex).question);
             questionCardValue.setFont(new Font(questionCardValue.getFont().getName(), Font.PLAIN, 30));
             questionCardValue.setEditable(false);
+            questionCardValue.setBackground(new Color(14283517));
             questionContent.add(questionCardValue);
         } else {
-            JTextArea errorNoCards = new JTextArea("No more cards to review :)");
-            errorNoCards.setFont(new Font(errorNoCards.getFont().getName(), Font.PLAIN, 70));
+            JTextArea errorNoCards = new JTextArea("No more cards to review!");
+            errorNoCards.setFont(new Font(errorNoCards.getFont().getName(), Font.PLAIN, 80));
             errorNoCards.setEditable(false);
             questionTitle.setVisible(false);
             answerContent.setVisible(false);
             buttonBar.setVisible(false);
             questionContent.removeAll();
             answerContent.removeAll();
+            errorNoCards.setBackground(new Color(14283517));
             questionContent.add(errorNoCards);
         }
     }

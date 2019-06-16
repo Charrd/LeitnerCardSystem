@@ -17,12 +17,17 @@ public class SkeletonPanel extends JPanel{
         //backButton.setBorder(gui.thickBorder);
         backButton.setFont(new Font(backButton.getFont().getName(), Font.PLAIN, 30));
         backPanel.add(backButton, BorderLayout.CENTER);
+        backButton.setBackground(new Color(8703723));
 
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                int dialogButton = JOptionPane.YES_NO_OPTION;
+                int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to return to home?", "Confirmation for return", dialogButton);
+                if(dialogResult == 0) {
+                    gui.setPanel(new HomePanel(gui));
+                }
                 System.out.println("NOOO GO BACK");
-                gui.setPanel(new HomePanel(gui));
             }
         });
     }

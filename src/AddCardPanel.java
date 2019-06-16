@@ -6,24 +6,45 @@ import java.awt.event.ActionListener;
 public class AddCardPanel extends SkeletonPanel {
 
 
+    private JPanel cardPanel;
+    private JPanel title;
+    private JPanel inputMother;
+    private JPanel question;
+    private JPanel questionInput;
+    private JPanel answer;
+    private JPanel answerInput;
+    private JLabel titleAddCard;
+    private JTextField questionInputTextArea;
+    private JTextField answerInputTextArea;
+    private JTextArea questionTitle;
+    private JTextArea answerTitle;
+    private JButton submitCardButton;
+
     public AddCardPanel(GraphicalUserInterface gui) {
         super(gui);
-
     }
-
 
     protected JPanel getContent() {
         JPanel contentPanel = new JPanel(new BorderLayout());
         contentPanel.setBackground(new Color(14283517));
 
         //panels to organise the placing of elements
-        JPanel cardPanel = new JPanel(new BorderLayout());
-        JPanel title = new JPanel();
-        JPanel inputMother = new JPanel(new GridLayout(4,1));
-        JPanel question = new JPanel();
-        JPanel questionInput = new JPanel(new BorderLayout());
-        JPanel answer = new JPanel();
-        JPanel answerInput = new JPanel(new BorderLayout());
+        cardPanel = new JPanel(new BorderLayout());
+        title = new JPanel();
+        inputMother = new JPanel(new GridLayout(4,1));
+        question = new JPanel();
+        questionInput = new JPanel(new BorderLayout());
+        answer = new JPanel();
+        answerInput = new JPanel(new BorderLayout());
+
+
+        cardPanel.setBackground(new Color(14283517));
+        title.setBackground(new Color(14283517));
+        inputMother.setBackground(new Color(14283517));
+        question.setBackground(new Color(14283517));
+        questionInput.setBackground(new Color(14283517));
+        answer.setBackground(new Color(14283517));
+        answerInput.setBackground(new Color(14283517));
 
         inputMother.add(question);
         inputMother.add(questionInput);
@@ -33,11 +54,14 @@ public class AddCardPanel extends SkeletonPanel {
         cardPanel.add(inputMother, BorderLayout.CENTER);
         contentPanel.add(cardPanel, BorderLayout.CENTER);
 
-        JLabel titleAddCard = new JLabel("Add a New Card");
-        JTextField questionInputTextArea = new JTextField();
-        JTextField answerInputTextArea = new JTextField();
-        JTextArea questionTitle = new JTextArea("Question to be answered:");
-        JTextArea answerTitle = new JTextArea("Answer:");
+        titleAddCard = new JLabel("Add a New Card");
+        questionInputTextArea = new JTextField();
+        answerInputTextArea = new JTextField();
+        questionTitle = new JTextArea("Question to be answered:");
+        answerTitle = new JTextArea("Answer:");
+
+        questionTitle.setBackground(new Color(14283517));
+        answerTitle.setBackground(new Color(14283517));
 
         titleAddCard.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 50));
         answerInputTextArea.setFont(new Font(answerInputTextArea.getFont().getName(), Font.PLAIN, 20));
@@ -53,8 +77,9 @@ public class AddCardPanel extends SkeletonPanel {
         question.add(questionTitle, BorderLayout.CENTER);
         answer.add(answerTitle, BorderLayout.CENTER);
 
-        JButton submitCardButton = new JButton("Submit New Card");
+        submitCardButton = new JButton("Submit New Card");
         submitCardButton.setFont(new Font(submitCardButton.getFont().getName(), Font.PLAIN, 30));
+        submitCardButton.setBackground(new Color(8703723));
 
         submitCardButton.addActionListener(new ActionListener() {
             @Override
@@ -65,7 +90,8 @@ public class AddCardPanel extends SkeletonPanel {
                 Card newCard = new Card(questionValue, answerValue, level);
                 UserData.cardsList.add(newCard);
                 System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
-
+                questionInputTextArea.setText("");
+                answerInputTextArea.setText("");
             }
         });
 

@@ -1,4 +1,10 @@
 #Cards
-#Sun Jun 16 17:38:07 AEST 2019
-numberOfRecords=0
-numberOfReviews=0
+#Sun Jun 16 23:50:18 AEST 2019
+numberOfRecords=2
+0answer=9
+numberOfReviews=6
+1answer=red, amber, ghreen
+1question=colour of traffic lights
+0question=how many planets in solar system
+1level=5
+0level=3
