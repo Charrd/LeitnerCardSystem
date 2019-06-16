@@ -42,7 +42,6 @@ public class SessionSetup {
 
         ArrayList<Card> cardsToReview = new ArrayList<>();
 
-
         for (int i=0; i<currentReviewLevels.size(); i++){
             int targetLevel = currentReviewLevels.get(i);
             for (int j=0; i<UserData.cardsList.size(); i++){
