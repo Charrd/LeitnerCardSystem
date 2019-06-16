@@ -44,7 +44,7 @@ public class SessionSetup {
 
         for (int i=0; i<currentReviewLevels.size(); i++){
             int targetLevel = currentReviewLevels.get(i);
-            for (int j=0; i<UserData.cardsList.size(); i++){
+            for (int j=0; j<UserData.cardsList.size(); j++){
                 if (UserData.cardsList.get(j).level == targetLevel) {
                     cardsToReview.add(UserData.cardsList.get(j));
                 }
