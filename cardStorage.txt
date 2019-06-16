@@ -1,10 +1,4 @@
 #Cards
-#Sun Jun 16 17:30:10 AEST 2019
-numberOfRecords=2
-0answer=four
-numberOfReviews=7
-1answer=skeet\!
-1question=yeet?
-0question=what two plus two
-1level=1
-0level=4
+#Sun Jun 16 17:38:07 AEST 2019
+numberOfRecords=0
+numberOfReviews=0
