@@ -7,6 +7,7 @@ import java.util.Properties;
 
 public class RecordFunctions {
 
+    //writes user data into relative file
     public static void write() {
         Properties properties = new Properties();
 
@@ -34,6 +35,7 @@ public class RecordFunctions {
 
     }
 
+    //reads user data from relative file
     public static void read() {
         List<Card> loadedCardsList = new ArrayList<>();
         Properties properties = new Properties();
@@ -45,7 +47,7 @@ public class RecordFunctions {
         String StringNumberOfReviews = properties.getProperty("numberOfReviews");
         int numberOfRecords = Integer.parseInt(StringNumberOfRecords);
 
-        //get cards note that the level is a String
+        //get cards
         for (int i=0; i<numberOfRecords; i++) {
             String question = properties.getProperty(i+"question");
             String answer = properties.getProperty(i+"answer");
@@ -56,7 +58,6 @@ public class RecordFunctions {
 
         UserData.cardsList = loadedCardsList;
         UserData.counterOfReviews = Integer.parseInt(StringNumberOfReviews);
-
     }
 
 }

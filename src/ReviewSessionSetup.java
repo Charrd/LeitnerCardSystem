@@ -1,7 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class SessionSetup {
+public class ReviewSessionSetup {
 
     public static int reviewSpacingLTwo = 2;
     public static int reviewSpacingLThree = 4;
@@ -10,6 +10,7 @@ public class SessionSetup {
     public static int reviewSpacingLSix = 32;
     public static int reviewSpacingLSeven = 64;
 
+    //calculates what levels need to be reviewed for this session based on how many sessions there have been
     public static ArrayList<Integer> findLevels() {
         int counter = UserData.counterOfReviews;
         ArrayList<Integer> currentReviewLevels = new ArrayList<>();
@@ -32,11 +33,11 @@ public class SessionSetup {
         if ((counter+8)%reviewSpacingLSeven == 0) {
             currentReviewLevels.add(7);
         }
-        System.out.println(counter + "" + currentReviewLevels);
         UserData.counterOfReviews++;
         return currentReviewLevels;
     }
 
+    //standard linear search algorithm to find cards to review based on levels to review
     public static ArrayList<Card> cardsToReview(ArrayList<Integer> currentReviewLevels) {
 
         ArrayList<Card> cardsToReview = new ArrayList<>();
@@ -49,7 +50,6 @@ public class SessionSetup {
                 }
             }
         }
-
         return cardsToReview;
     }
 

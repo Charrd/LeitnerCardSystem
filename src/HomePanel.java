@@ -14,7 +14,6 @@ public class HomePanel extends JPanel {
         setLayout(new GridLayout(2,1));
         add(mainPanel);
         add(subButtonPanel);
-
         subButtonPanel.add(actionButtonPanel);
         subButtonPanel.add(helpButtonSuperPanel, BorderLayout.CENTER);
 
@@ -48,7 +47,7 @@ public class HomePanel extends JPanel {
         mainPanel.add(mainTitle, BorderLayout.CENTER);
 
 
-        //button actions
+        //button actions change the JFrame's panel
         addCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

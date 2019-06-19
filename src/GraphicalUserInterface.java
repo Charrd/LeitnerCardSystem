@@ -34,6 +34,8 @@ public class GraphicalUserInterface {
 
         mainJFrame.setVisible(true);
     }
+
+    //clears panel and adds new panel for new page
     public void setPanel(JPanel panel){
         Container mainContentPane = mainJFrame.getContentPane();
         mainContentPane.removeAll();

@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class SkeletonPanel extends JPanel{
     public SkeletonPanel(GraphicalUserInterface gui) {
+
+        //set consistent layout for all panels
         JPanel content = getContent();
         JPanel backPanel = new JPanel(new BorderLayout());
         setLayout(new BorderLayout());
@@ -14,11 +16,11 @@ public class SkeletonPanel extends JPanel{
         backPanel.setBackground(new Color(14283517));
 
         JButton backButton = new JButton("Back");
-        //backButton.setBorder(gui.thickBorder);
         backButton.setFont(new Font(backButton.getFont().getName(), Font.PLAIN, 30));
         backPanel.add(backButton, BorderLayout.CENTER);
         backButton.setBackground(new Color(8703723));
 
+        //back button that has a pop up to check you want to go back
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -31,6 +33,7 @@ public class SkeletonPanel extends JPanel{
         });
     }
 
+    //to be expanded on in each specific panel
     protected JPanel getContent() {
         return new JPanel(new BorderLayout());
     }

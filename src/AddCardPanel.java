@@ -37,7 +37,6 @@ public class AddCardPanel extends SkeletonPanel {
         answer = new JPanel();
         answerInput = new JPanel(new BorderLayout());
 
-
         cardPanel.setBackground(new Color(14283517));
         title.setBackground(new Color(14283517));
         inputMother.setBackground(new Color(14283517));
@@ -80,7 +79,9 @@ public class AddCardPanel extends SkeletonPanel {
         submitCardButton = new JButton("Submit New Card");
         submitCardButton.setFont(new Font(submitCardButton.getFont().getName(), Font.PLAIN, 30));
         submitCardButton.setBackground(new Color(8703723));
+        cardPanel.add(submitCardButton, BorderLayout.SOUTH);
 
+        //button for adding card into array of cards
         submitCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -93,8 +94,6 @@ public class AddCardPanel extends SkeletonPanel {
                 answerInputTextArea.setText("");
             }
         });
-
-        cardPanel.add(submitCardButton, BorderLayout.SOUTH);
 
         return contentPanel;
     }

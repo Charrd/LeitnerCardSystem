@@ -71,7 +71,7 @@ public class ReviewPanel extends SkeletonPanel {
 
         questionContent.add(startReview);
 
-        //algorithms
+        //button reveals answer and removes itself to create the wrong and right buttons
         next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,6 +89,7 @@ public class ReviewPanel extends SkeletonPanel {
             }
         });
 
+        //changes level of card to 1, shows next card's question
         wrong.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -97,6 +98,7 @@ public class ReviewPanel extends SkeletonPanel {
             }
         });
 
+        //moves card's level up and shows next card's question
         right.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,8 +114,8 @@ public class ReviewPanel extends SkeletonPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cardIndex = 0;
-                currentReviewLevels = SessionSetup.findLevels();
-                currentReviewCards = SessionSetup.cardsToReview(currentReviewLevels);
+                currentReviewLevels = ReviewSessionSetup.findLevels();
+                currentReviewCards = ReviewSessionSetup.cardsToReview(currentReviewLevels);
                 if (currentReviewCards.size() != 0) {
                     questionTitle.setVisible(true);
                     answerContent.setVisible(true);
@@ -142,6 +144,8 @@ public class ReviewPanel extends SkeletonPanel {
         return contentPanel;
     }
 
+
+    //checks que if there are more cards, displays it's question
     protected void displayNextCard() {
         cardIndex++;
         if (cardIndex < currentReviewCards.size()) {
