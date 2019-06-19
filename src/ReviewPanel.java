@@ -44,9 +44,9 @@ public class ReviewPanel extends SkeletonPanel {
         questionTitle.setBackground(new Color(14283517));
         answerContent.setBackground(new Color(14283517));
 
-        next = new JButton("NEXT");
-        wrong = new JButton("NEEDS WORK");
-        right = new JButton("YAY I GOT IT RIGHT");
+        next = new JButton("Next");
+        wrong = new JButton("Needs work");
+        right = new JButton("Yay I got it right!");
 
         next.setBackground(new Color(8703723));
         wrong.setBackground(new Color(8703723));
@@ -56,7 +56,7 @@ public class ReviewPanel extends SkeletonPanel {
         right.setFont(new Font(right.getFont().getName(), Font.PLAIN, 30));
         wrong.setFont(new Font(wrong.getFont().getName(), Font.PLAIN, 30));
 
-        questionLabel = new JLabel("QUESTION");
+        questionLabel = new JLabel("Question");
         questionLabel.setFont(new Font(questionLabel.getFont().getName(), Font.PLAIN, 50));
         questionTitle.add(questionLabel);
 
@@ -66,7 +66,7 @@ public class ReviewPanel extends SkeletonPanel {
         answerContent.setVisible(false);
         buttonBar.setVisible(false);
 
-        startReview = new JButton("START REVIEW");
+        startReview = new JButton("Start Review");
         startReview.setFont(new Font(startReview.getFont().getName(), Font.PLAIN, 80));
 
         questionContent.add(startReview);
