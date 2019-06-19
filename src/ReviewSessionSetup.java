@@ -47,6 +47,7 @@ public class ReviewSessionSetup {
             for (int j=0; j<UserData.cardsList.size(); j++){
                 if (UserData.cardsList.get(j).level == targetLevel) {
                     cardsToReview.add(UserData.cardsList.get(j));
+                    System.out.println(UserData.cardsList.get(j).question + " " + UserData.cardsList.get(j).answer + " " + UserData.cardsList.get(j).level);
                 }
             }
         }

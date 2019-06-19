@@ -1,67 +1,13 @@
 #Cards
-#Wed Jun 19 20:29:28 AEST 2019
-numberOfRecords=21
-4question=find values
-10level=7
-8level=7
-20level=7
-16question=fresnel zone
-12level=7
-14level=7
-16level=7
-9question=malus law reliability
-10answer=more ideal polaroid
-18level=7
-12answer=difference of dot and centre dot (infinite wl) is either wl/2 or wl
-2question=Malus Law Diagram
-17answer=decreasing intensity as continue
-14answer=length of dash decrease
-11answer=limit of reading
-19answer=x/L \= wl*n/distance
-16answer=half of gap
-13answer=wavelength
-18answer=x/L \= wl(n+0.5)/width
-15answer=double normal size
-14question=single slit if increase width of slit
-20answer=gas-filled or vacuum tube that is sensitive to light
-19question=equation for double constructive
-7question=Malus Law minimise \= validity how
-12question=explain single slit
-0question=Why UV catastrophe?
-4answer=c\=f lambda and KE\=qV
-1answer=battery, uv light, ammeter, electrons and metal plates
-3answer=stop voltage increase, KE increase
-0answer=Shorter wl must have e- oscillate at harder to reach quantised nodes
-9answer=same repeat on both sides
-6answer=90 degrees should invert pattern
-2answer=I(i) -> I(0) -> I(T) with circles for polaroid
-8answer=minimum same place, same shape
-5answer=work to release from metal needs threshold frequency \= intercept
-7answer=measure background light
-1level=7
-5question=why intercept
-3level=7
-17question=dashes for interference how draw
-5level=7
-10question=fix malus law prac how
-7level=7
-11level=7
-9level=7
-13level=7
-3question=Photoelectric effect frequency increases
-15level=8
-15question=middle dash of single slit
-numberOfReviews=86
-17level=7
-19level=7
-20question=What is photocell/tube
-8question=Malus law accuracy
-1question=Photoelectric diagram
-13question=wl is
-18question=equation for single constructive
-6question=Michaelson-Morley rotate
-0level=7
-11question=double slit error
-2level=7
-4level=7
-6level=7
+#Thu Jun 20 00:22:28 AEST 2019
+0answer=Red
+2answer=Green
+0question=Colour blood
+2level=4
+numberOfReviews=365
+1answer=Blue
+1question=Colour sky
+0level=1
+numberOfRecords=3
+1level=2
+2question=Colour grass
