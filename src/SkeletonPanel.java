@@ -29,6 +29,13 @@ public class SkeletonPanel extends JPanel{
                 if(dialogResult == 0) {
                     gui.setPanel(new HomePanel(gui));
                 }
+
+                /*dialog box
+                Code from StackOverflow page: https://stackoverflow.com/questions/8689122/joptionpane-yes-no-options-confirm-dialog-box-issue
+                Code Author: https://stackoverflow.com/users/1927633/alv
+                Licensed under CC-Wiki: https://creativecommons.org/licenses/by-sa/3.0/
+                 */
+
             }
         });
     }
