@@ -52,7 +52,6 @@ public class HomePanel extends JPanel {
         addCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("YEEEEEET");
                 gui.setPanel(new AddCardPanel(gui));
             }
         });
@@ -60,7 +59,6 @@ public class HomePanel extends JPanel {
         reviewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("yet");
                 gui.setPanel(new ReviewPanel(gui));
             }
         });
@@ -68,7 +66,6 @@ public class HomePanel extends JPanel {
         helpButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("HELPPPPP PLEASE");
                 gui.setPanel(new HelpPanel(gui));
             }
         });

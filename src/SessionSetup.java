@@ -16,7 +16,6 @@ public class SessionSetup {
         currentReviewLevels.add(1);
         if ((counter+1)%reviewSpacingLTwo == 0) {
             currentReviewLevels.add(2);
-            System.out.println("reached");
         }
         if ((counter+2)%reviewSpacingLThree == 0) {
             currentReviewLevels.add(3);

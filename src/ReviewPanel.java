@@ -75,7 +75,6 @@ public class ReviewPanel extends SkeletonPanel {
         next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("next");
                 next.setVisible(false);
                 wrong.setVisible(true);
                 right.setVisible(true);
@@ -93,7 +92,6 @@ public class ReviewPanel extends SkeletonPanel {
         wrong.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("wrong");
                 currentReviewCards.get(cardIndex).level = 1;
                 displayNextCard();
             }
@@ -102,7 +100,6 @@ public class ReviewPanel extends SkeletonPanel {
         right.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("right");
                 currentReviewCards.get(cardIndex).level++;
                 displayNextCard();
             }
@@ -114,11 +111,9 @@ public class ReviewPanel extends SkeletonPanel {
         startReview.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("BEGIN");
                 cardIndex = 0;
                 currentReviewLevels = SessionSetup.findLevels();
                 currentReviewCards = SessionSetup.cardsToReview(currentReviewLevels);
-                System.out.println(currentReviewCards);
                 if (currentReviewCards.size() != 0) {
                     questionTitle.setVisible(true);
                     answerContent.setVisible(true);

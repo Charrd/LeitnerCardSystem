@@ -89,7 +89,6 @@ public class AddCardPanel extends SkeletonPanel {
                 int level = 1;
                 Card newCard = new Card(questionValue, answerValue, level);
                 UserData.cardsList.add(newCard);
-                System.out.println("Submit Card: Question: " + questionValue + " Answer: " + answerValue);
                 questionInputTextArea.setText("");
                 answerInputTextArea.setText("");
             }

@@ -1,10 +1,67 @@
 #Cards
-#Sun Jun 16 23:50:18 AEST 2019
-numberOfRecords=2
-0answer=9
+#Wed Jun 19 20:06:21 AEST 2019
+numberOfRecords=21
+4question=find values
+10level=2
+8level=3
+20level=2
+16question=fresnel zone
+12level=2
+14level=2
+16level=2
+9question=malus law reliability
+10answer=more ideal polaroid
+18level=2
+12answer=difference of dot and centre dot (infinite wl) is either wl/2 or wl
+2question=Malus Law Diagram
+17answer=decreasing intensity as continue
+14answer=length of dash decrease
+11answer=limit of reading
+19answer=x/L \= wl*n/distance
+16answer=half of gap
+13answer=wavelength
+18answer=x/L \= wl(n+0.5)/width
+15answer=double normal size
+14question=single slit if increase width of slit
+20answer=gas-filled or vacuum tube that is sensitive to light
+19question=equation for double constructive
+7question=Malus Law minimise \= validity how
+12question=explain single slit
+0question=Why UV catastrophe?
+4answer=c\=f lambda and KE\=qV
+1answer=battery, uv light, ammeter, electrons and metal plates
+3answer=stop voltage increase, KE increase
+0answer=Shorter wl must have e- oscillate at harder to reach quantised nodes
+9answer=same repeat on both sides
+6answer=90 degrees should invert pattern
+2answer=I(i) -> I(0) -> I(T) with circles for polaroid
+8answer=minimum same place, same shape
+5answer=work to release from metal needs threshold frequency \= intercept
+7answer=measure background light
+1level=3
+5question=why intercept
+3level=3
+17question=dashes for interference how draw
+5level=3
+10question=fix malus law prac how
+7level=3
+11level=2
+9level=2
+13level=2
+3question=Photoelectric effect frequency increases
+15level=2
+15question=middle dash of single slit
 numberOfReviews=6
-1answer=red, amber, ghreen
-1question=colour of traffic lights
-0question=how many planets in solar system
-1level=5
-0level=3
+17level=2
+19level=2
+20question=What is photocell/tube
+8question=Malus law accuracy
+1question=Photoelectric diagram
+13question=wl is
+18question=equation for single constructive
+6question=Michaelson-Morley rotate
+0level=1
+11question=double slit error
+2level=3
+4level=3
+6level=3
