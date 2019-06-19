@@ -27,7 +27,6 @@ public class SkeletonPanel extends JPanel{
                 if(dialogResult == 0) {
                     gui.setPanel(new HomePanel(gui));
                 }
-                System.out.println("NOOO GO BACK");
             }
         });
     }
